@@ -1,3 +1,4 @@
+# token id group คนมักเลข = "pjVpf1rLdsxIzhh4hyVHp293fhJcjGd9OnaFe6f7PM8"
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -49,7 +50,7 @@ def r_time():
     return hour,min,sec
 def send(max):
     url = 'https://notify-api.line.me/api/notify'
-    token = 'pjVpf1rLdsxIzhh4hyVHp293fhJcjGd9OnaFe6f7PM8'
+    token = 'd3dVYwoTtmtGtLrDGXz491ZZlzogquSTAgVAa0bF7bI'
     headers = {'content-type': 'application/x-www-form-urlencoded', 'Authorization': 'Bearer ' + token}
     msg = max
     r = requests.post(url, headers=headers, data={'message': msg})
