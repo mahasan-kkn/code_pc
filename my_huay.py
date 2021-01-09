@@ -19,23 +19,23 @@ def send():
     print(post)
     line.sendtext(post)
 
-def r_time():
-    tm = time.localtime()
-    hour = tm.tm_hour
-    min = tm.tm_min
-    sec = tm.tm_sec
-    return hour,min,sec
+def check():
+    page = requests.get(web)
+    page.encoding = 'utf-8'
+    soup = BeautifulSoup(page.content,'lxml')
+    soup1 = soup.find('div',class_= 'card-body p-2')
+    header = soup1.find(class_="text-danger").text
+    header1 = header[:25] # จับยี่กี่รอบที่ ....
+    return header1
 
 if __name__ == '__main__':
-    t_h = [0,1,2,3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
-    t_m = [15,30,45,0]
+    pretest = 'wellcom'
     while(True):
-        h,m,s = r_time()
-        if h in t_h :
-            if m in t_m :
-                line.sendtext('หมดเวลารอผลอีก 3 นาที')
-                time.sleep(210)
-                send()
+        audit = check()
+        if pretest != audit :
+            send()
+            pretest = audit
+            continue
         else:
             time.sleep(20)
             continue
