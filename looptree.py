@@ -20,7 +20,8 @@ def tamnai():
     g1,g2,g3 = b[3]+b[4]+b[5],b[3]+b[4]+b[6],b[3]+b[5]+b[6]
     h1 = b[4]+b[5]+b[6]
     lot = [c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,f1,f2,f3,f4,f5,f6,g1,g2,g3,h1]
-    print(random.sample(lot,k=30))
+    print(lot)
+    #print(random.sample(lot,k=30))
 if __name__ == '__main__':
     while (True):
         tamnai()
