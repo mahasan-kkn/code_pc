@@ -23,7 +23,7 @@ for i in range(len_fill-2):
             total.append(a+b+c)
 print(total)
 while(True):
-    message = input("สุ่มคัดเลือกตัวเลขหรือไม่ พิมพ์ y = ตกลง พิมพ์ n = ไม่ตกลง :").lower()
+    message = input("สุ่มคัดเลือกตัวเลขหรือไม่ พิมพ์ y = ตกลง พิมพ์ n = ไม่ตกลงหรือออกโปรแกรม :").lower()
     if message == "y" :
         while(True):
             select = input(f"เลขมีอยู่ {len(total)} ตัว ต้องการเลือกกี่ตัว : ")
