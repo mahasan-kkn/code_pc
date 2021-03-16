@@ -1,5 +1,9 @@
 {
 
+<<<<<<< HEAD
     "python.pythonPath": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python38\\python.exe"
+=======
+    "python.pythonPath": "C:\\Program Files\\Python37\\python.exe"
+>>>>>>> d1231b3b5fb4435d2d9c3944405c22eb7323aa7a
 
 }
