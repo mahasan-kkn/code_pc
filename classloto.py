@@ -1,5 +1,6 @@
 import random
 import pyautogui
+import time
 
 class Calculate:
 
@@ -62,11 +63,26 @@ class Calculate:
         return rander
         
     @staticmethod
-    def sendlotto(point,sendlist):
+    def sendlotto(x,y,sendlist):
         pool = sendlist
-        pyautogui.moveTo(point)
+        pyautogui.moveTo(x,y,2)
         pyautogui.click()
         for i in pool :
             pyautogui.typewrite(i)
+            time.sleep(1)
             pyautogui.typewrite(['enter'])
+
+    @staticmethod
+    def sendlottoVIP(x,y,sendlist):
+        pool = ""
+        for i in sendlist:
+            for j in i :
+                pool += j
+        pyautogui.moveTo(x,y,2)
+        pyautogui.click()
+        for k in pool:
+            pyautogui.typewrite(k)
+            time.sleep(0.5)
+        
+
 
