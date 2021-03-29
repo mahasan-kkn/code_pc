@@ -1,7 +1,11 @@
 import random
+import pyautogui
+
 class Calculate:
+
     def __init__(self,number):
         self.number = number
+
     def lotto2(self):
         fill = []
         num = self.number
@@ -22,8 +26,9 @@ class Calculate:
                 #print(total_sum) # เลข 2 ตัวทั้งหมดที่ได้
                 #print(total_repeat) # แยกเลขเบิ้ลออก
         t_r = set(total_repeat) # แปลงประเภทข้อมูลเป็น set เพื่อสะดวกในการลบเลขออก
-        t_sr = total_sum - t_r # เลขที่คัดกรองแล้วไม่มีเลขเบิ้ลและเลขซ้ำ
-        print(t_sr)
+        t_sr = list(total_sum - t_r) # เลขที่คัดกรองแล้วไม่มีเลขเบิ้ลและเลขซ้ำ
+        return t_sr
+
     def lotto3(self):
         num = self.number
         fill = []
@@ -39,5 +44,29 @@ class Calculate:
                 for k in range(j+1,len_fill):
                     c = fill[k]
                     total.append(a+b+c)
-        print(total)
+        return total
+
+    @staticmethod
+    def ranlotto(numlist):
+        num = numlist
+        lennum = len(num)
+        while(True):
+            select = input(f"เลขมีอยู่ {lennum} ตัว ต้องการเลือกกี่ตัว : ")
+            rander = []
+            if select.isdigit() == True :
+                if 1 <= int(select) <= lennum:
+                    rander = random.sample(num,k=int(select))
+                    break
+            else:
+                print("กรอกข้อมูลให้ถูกต้อง")
+        return rander
+        
+    @staticmethod
+    def sendlotto(point,sendlist):
+        pool = sendlist
+        pyautogui.moveTo(point)
+        pyautogui.click()
+        for i in pool :
+            pyautogui.typewrite(i)
+            pyautogui.typewrite(['enter'])
 
