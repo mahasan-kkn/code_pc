@@ -9,10 +9,16 @@ from classloto import Calculate
                                 การใช้งาน function ที่ 5 ให้แบ่งการทำงานเป็น 2 จอ
 '''
 
-box = Calculate('0123456')
-huay = box.lotto3()
-randhuay = Calculate.ranlotto(huay)
-print(randhuay)
+#box = Calculate('01345678')
+#huay = box.lotto3()
+#randhuay = Calculate.ranlotto(huay)
+#print(randhuay)
 #Calculate.sendlotto(200,300,randhuay)
-Calculate.sendlottoVIP(200,300,randhuay)
-
+#Calculate.sendlottoVIP(340,365,randhuay)
+#Calculate.selectVIP()
+a,b,c,d = Calculate.selectVIP()
+print(a)
+print(b)
+print(c)
+print(d)
+Calculate.loopVIP(a,b,c,d)

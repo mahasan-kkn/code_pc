@@ -73,7 +73,7 @@ class Calculate:
             pyautogui.typewrite(['enter'])
 
     @staticmethod
-    def sendlottoVIP(x,y,sendlist):
+    def sendlottoVIP(x,y,sendlist): # ค่า x และ y หาด้วยโปรแกรม "MPos.exe"
         pool = ""
         for i in sendlist:
             for j in i :
@@ -83,6 +83,95 @@ class Calculate:
         for k in pool:
             pyautogui.typewrite(k)
             time.sleep(0.5)
-        
+
+    @staticmethod
+    def selectVIP():
+        sort3 = []
+        switch3 = []
+        top2 = []
+        bottom2 = []
+        while True:
+            twoORtree = input("3 ตัวบน พิมพ์ : aaa    เลข 3 ตัวโต๊ด พิมพ์ : bbb \n 2 ตัวบน พิมพ์ : aa 2 ตัวล่าง พิมพ์ : cc \n หรือออกจากโปรแกรม พิมพ์ : q \n")
+            if twoORtree == "aaa" :
+                while True:
+                    data = ""
+                    data = input("พิมพ์ตัวเลข 3 ตัว : ")
+                    sort3.append(data)
+                    out = input("พิมพ์ต่อเลือก : พิมพ์อะไรก็ได้  ไม่พิมพ์ต่อเลือก : n ==> ")
+                    if out == "n" :
+                        print(sort3)
+                        break
+                    else:
+                        continue
+            elif twoORtree == "bbb" :
+                while True:
+                    data = ""
+                    data = input("พิมพ์ตัวเลข 3 ตัว : ")
+                    switch3.append(data)
+                    out = input("พิมพ์ต่อเลือก : พิมพ์อะไรก็ได้  ไม่พิมพ์ต่อเลือก : n  ==> ")
+                    if out == "n" :
+                        print(switch3)
+                        break
+                    else:
+                        continue
+            elif twoORtree == "aa" :
+                while True:
+                    data = ""
+                    data = input("พิมพ์ตัวเลข 2 ตัว : ")
+                    top2.append(data)
+                    out = input("พิมพ์ต่อเลือก : พิมพ์อะไรก็ได้  ไม่พิมพ์ต่อเลือก : n  ==> ")
+                    if out == "n" :
+                        print(top2)
+                        break
+                    else:
+                        continue
+            elif twoORtree == "cc" :
+                while True:
+                    data = ""
+                    data = input("พิมพ์ตัวเลข 2 ตัว : ")
+                    bottom2.append(data)
+                    out = input("พิมพ์ต่อเลือก : พิมพ์อะไรก็ได้  ไม่พิมพ์ต่อเลือก : n  ==> ")
+                    if out == "n" :
+                        print(bottom2)
+                        break
+                    else: 
+                        continue
+            elif twoORtree == "q" :
+                print(f"สามตัวบน = {sort3} \n สามตัวโต๊ด = {switch3} \n สองตัวบน = {top2} \n สองตัวล่าง {bottom2}")
+                break
+            else :
+                print("พิมพ์ใหม่")
+                continue
+        return sort3,switch3,top2,bottom2
+
+    @staticmethod
+    def loopVIP(s1,s2,s3,s4): # s1,s2,s3,s4 = สามตัวตรง,สามตัวโต๊ด,สองตัวบน,สองตัวล่าง ==> typelist
+        while True:
+            lotto = input("เลือก 3 ตัวตรง พิมพ์ : t1 เลือก 3 ตัวโต๊ด พิมพ์ : t2 \n เลือก 2 ตัวบน พิมพ์ : t3 เลือก 2 ตัวล่าง พิมพ์ : t4 \n ออกจากโปรแกรม พิมพ์ q ==> ")
+            if lotto == "q" :
+                break
+            elif lotto == "t1" :
+                sendlist = s1
+                x = int(input("พิกัดแกน x ==> "))
+                y = int(input("พิกัดแกน y ==> "))
+                Calculate.sendlottoVIP(x,y,sendlist)
+            elif lotto == "t2" :
+                sendlist = s2
+                x = int(input("พิกัดแกน x ==> "))
+                y = int(input("พิกัดแกน y ==> "))
+                Calculate.sendlottoVIP(x,y,sendlist)
+            elif lotto == "t3" :
+                sendlist = s3
+                x = int(input("พิกัดแกน x ==> "))
+                y = int(input("พิกัดแกน y ==> "))
+                Calculate.sendlottoVIP(x,y,sendlist)
+            elif lotto == "t4" :
+                sendlist = s4
+                x = int(input("พิกัดแกน x ==> "))
+                y = int(input("พิกัดแกน y ==> "))
+                Calculate.sendlottoVIP(x,y,sendlist)
+            else :
+                continue
+
 
 
