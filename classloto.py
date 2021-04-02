@@ -173,5 +173,16 @@ class Calculate:
             else :
                 continue
 
+    @staticmethod
+    def randNumber(r_num): # r_num = เลข 0 - 9 จำนวนกี่ตัว type = int
+        dunk = ['0','1','2','3','4','5','6','7','8','9']
+        rander = random.sample(dunk,k=r_num)
+        randoor = ""
+        for i in rander:
+            randoor += i
+        return randoor
+
+
+
 
 
