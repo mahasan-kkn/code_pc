@@ -192,6 +192,30 @@ class Calculate:
         d = list(b - c)
         return d
 
+    @staticmethod
+    def formula_st(fixer): # สูตรที่ 1 เอาเลขที่ออกล่าสุดทุกตัวและสุ่มเลขที่ไม่ออกให้ครบตามจำนวนที่กำหนด = fixer(type=>int) ควรอยู่ระหว่าง 6-9 ตัว
+        top_1 = []
+        bottom_1 = []
+        top = input("เลขสามตัวบนล่าสุด : ")
+        for i in top:
+            top_1.append(i)
+        bottom = input("เลขสองตัวล่างล่าสุด : ")
+        for j in bottom:
+            bottom_1.append(j)
+        top_2 = set(top_1)
+        bottom_2 = set(bottom_1)
+        jackpot = top_2.union(bottom_2)
+        total = {'0','1','2','3','4','5','6','7','8','9'}
+        blank = total - jackpot
+        banlance = fixer - len(jackpot)
+        summary = set(random.sample(blank,k=banlance))
+        goody = jackpot.union(summary)
+        R_formula = list(goody)
+        return R_formula
+
+        
+
+
         
 
 

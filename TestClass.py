@@ -25,6 +25,8 @@ from classloto import Calculate
 #Calculate.loopVIP(a,b,c,d)
 #tem = Calculate.randNumber(7)
 #print(tem)
-m = "569"
-Cut = Calculate.cutnumber(m)
-print(Cut)
+#m = "569"
+#Cut = Calculate.cutnumber(m)
+#print(Cut)
+post = Calculate.formula_st(8)
+print(post)
