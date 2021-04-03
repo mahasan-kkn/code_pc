@@ -182,6 +182,19 @@ class Calculate:
             randoor += i
         return randoor
 
+    @staticmethod
+    def cutnumber(cutN): # เลือกตัวเลข 0-9 ที่คิดว่าไม่ออกโดยใส่ค่าติดกันได้  cutN = type(string)
+        a = []
+        b = {'0','1','2','3','4','5','6','7','8','9'}
+        for i in cutN:
+            a.append(i)
+        c = set(a)
+        d = list(b - c)
+        return d
+
+        
+
+
 
 
 

@@ -10,11 +10,11 @@ from classloto import Calculate
 '''
 
 
-box = Calculate(Calculate.randNumber(8))
-huay = box.lotto3()
-randhuay = Calculate.ranlotto(huay)
-print(randhuay)
-Calculate.sendlotto(200,300,randhuay)
+#box = Calculate(Calculate.randNumber(8))
+#huay = box.lotto3()
+#randhuay = Calculate.ranlotto(huay)
+#print(randhuay)
+#Calculate.sendlotto(200,300,randhuay)
 #Calculate.sendlottoVIP(340,365,randhuay)
 #Calculate.selectVIP()
 #a,b,c,d = Calculate.selectVIP()
@@ -25,3 +25,6 @@ Calculate.sendlotto(200,300,randhuay)
 #Calculate.loopVIP(a,b,c,d)
 #tem = Calculate.randNumber(7)
 #print(tem)
+m = "569"
+Cut = Calculate.cutnumber(m)
+print(Cut)
