@@ -15,7 +15,8 @@ from classloto import Calculate
 #randhuay = Calculate.ranlotto(huay)
 #print(randhuay)
 #Calculate.sendlotto(200,300,randhuay)
-#Calculate.sendlottoVIP(340,365,randhuay)
+randhuay = []
+Calculate.sendlottoVIP(340,365,randhuay)
 #Calculate.selectVIP()
 #a,b,c,d = Calculate.selectVIP()
 #print(a)
@@ -28,5 +29,5 @@ from classloto import Calculate
 #m = "569"
 #Cut = Calculate.cutnumber(m)
 #print(Cut)
-post = Calculate.formula_st(8)
-print(post)
+#post = Calculate.formula_st(8)
+#print(post)
