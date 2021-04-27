@@ -63,7 +63,7 @@ class Calculate:
         return rander
         
     @staticmethod
-    def sendlotto(x,y,sendlist): ชุดตัวเลขที่จะส่งออกไปยังเวป ประเภทข้อมูล = list
+    def sendlotto(x,y,sendlist): #ชุดตัวเลขที่จะส่งออกไปยังเวป ประเภทข้อมูล = list
         pool = sendlist
         pyautogui.moveTo(x,y,2)
         pyautogui.click()
