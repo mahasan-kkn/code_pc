@@ -4,7 +4,7 @@ import time
 
 class Calculate:
 
-    def __init__(self,number):
+    def __init__(self,number):# เลขที่ชอบ 0 - 9 พิมพ์ติดกันเลย type(string)
         self.number = number
 
     def lotto2(self):
@@ -48,7 +48,7 @@ class Calculate:
         return total
 
     @staticmethod
-    def ranlotto(numlist):
+    def ranlotto(numlist):# เลขที่ผ่านการเรียงแล้ว ประเภทข้อมูล = list
         num = numlist
         lennum = len(num)
         while(True):
@@ -63,7 +63,7 @@ class Calculate:
         return rander
         
     @staticmethod
-    def sendlotto(x,y,sendlist):
+    def sendlotto(x,y,sendlist): ชุดตัวเลขที่จะส่งออกไปยังเวป ประเภทข้อมูล = list
         pool = sendlist
         pyautogui.moveTo(x,y,2)
         pyautogui.click()
