@@ -10,7 +10,7 @@ from classloto import Calculate
 '''
 
 
-#box = Calculate(Calculate.randNumber(8))
+#box = Calculate(Calculate.randNumber(7))
 #huay = box.lotto3()
 #randhuay = Calculate.ranlotto(huay)
 #print(randhuay)
@@ -28,5 +28,10 @@ from classloto import Calculate
 #m = "569"
 #Cut = Calculate.cutnumber(m)
 #print(Cut)
-#post = Calculate.formula_st(8)
-#print(post)
+post = Calculate.formula_st(7)
+box = Calculate(post)
+huay = box.lotto3()
+randhuay = Calculate.ranlotto(huay)
+print(randhuay)
+Calculate.sendlottoVIP(417,585,randhuay)
+print("complete")

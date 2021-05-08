@@ -211,7 +211,13 @@ class Calculate:
         summary = set(random.sample(blank,k=banlance))
         goody = jackpot.union(summary)
         R_formula = list(goody)
-        return R_formula
+        RX = ""
+        for f in range(len(R_formula)):
+            if f == 0:
+                RX = R_formula[0]
+            else:
+                RX += R_formula[f]
+        return RX
 
         
 
