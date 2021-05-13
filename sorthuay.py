@@ -3,6 +3,7 @@ import numpy as np
 filename = 'Hresult.txt'
 f = open(filename,encoding='utf-8')
 text = f.read()
+f.close() # เก็บข้อมูลไว้ในตัวแปร text แล้วก็ใช้คำสั่งปิดไฟล์ได้เลย
 #print(type(text))
 text1 = ""
 for i in text:
@@ -39,6 +40,30 @@ for i in range(len(lotto)): # สร้างลิสต์ซ้อนลิ�
         m = []
         m.append(lotto[i])
 #print(dm)
-arr = np.array(dm) # นำลิสต์ dm ไปสร้างเป็น array 2 มิติ ชื่อ arr
-print(arr)
-f.close()
+
+#----------------------------------------------------
+t = '0123456789'
+a = []
+b = []
+c = []
+for i in t:
+    a.append(i)
+for i in range(len(a)-1):
+    for j in range(i+1,len(a)):
+        r1 = a[i]
+        r2 = a[j]
+        b.append(r1)
+        b.append(r2)
+        c.append(b)
+        b = []
+#print(c)
+art = 0
+df = len(dm)
+for i in c:
+    for j in dm:
+        if i[0] in j:
+            if i[1] in j:
+                art += 1
+    print("{} = {:.2f} %".format(i,(art/df)*100))
+    art = 0
+
