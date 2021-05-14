@@ -1,6 +1,6 @@
 import os
 import numpy as np
-filename = 'Hresult.txt'
+filename = 'huayresult.txt'
 f = open(filename,encoding='utf-8')
 text = f.read()
 f.close() # เก็บข้อมูลไว้ในตัวแปร text แล้วก็ใช้คำสั่งปิดไฟล์ได้เลย
@@ -64,6 +64,14 @@ for i in c:
         if i[0] in j:
             if i[1] in j:
                 art += 1
-    print("{} = {:.2f} %".format(i,(art/df)*100))
+    #print("{} = {:.2f} %".format(i,(art/df)*100))
     art = 0
 
+tek = 0
+bt = [str(i) for i in range(10)]
+for i in bt:
+    for j in range(len(dm)):
+        if i in dm[j]:
+            tek += 1
+    print("เลข :{} ==> {:.2f} %".format(i,(tek/len(dm))*100))
+    tek = 0
